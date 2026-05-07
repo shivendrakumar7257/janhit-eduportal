@@ -41,7 +41,7 @@ export const Route = createFileRoute("/institutions/$slug")({
 });
 
 function Detail() {
-  const { inst } = Route.useLoaderData();
+  const { inst } = Route.useLoaderData() as { inst: Institution };
 
   return (
     <>
