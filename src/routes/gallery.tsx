@@ -8,7 +8,7 @@ import grad from "@/assets/gallery-graduation.jpg";
 import sports from "@/assets/gallery-sports.jpg";
 import classroom from "@/assets/gallery-classroom.jpg";
 import cultural from "@/assets/gallery-cultural.jpg";
-import campus from "@/assets/hero-campus.jpg";
+import campus from "@/assets/hero-luxurious-bright.png";
 import school from "@/assets/campus-school.jpg";
 import law from "@/assets/campus-law.jpg";
 

@@ -1,6 +1,5 @@
-import { createRootRouteWithContext, HeadContent, Outlet, Scripts, useRouter, Link } from "@tanstack/react-router";
+import { createRootRouteWithContext, Outlet, useRouter, Link } from "@tanstack/react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import appCss from "../styles.css?url";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
@@ -39,41 +38,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Janhit Group of Institutions — Empowering Education Since 2002" },
-      { name: "description", content: "Janhit Group of Institutions — a premier family of colleges and schools across Greater Noida, Ghaziabad and Saharanpur, offering programs in Law, Management, Education, Commerce, Science and K-12." },
-      { property: "og:title", content: "Janhit Group of Institutions" },
-      { property: "og:description", content: "Empowering Education Across Uttar Pradesh Since 2002" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&display=swap" },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <head><HeadContent /></head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

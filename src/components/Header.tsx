@@ -30,15 +30,11 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-2" : "py-4"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-background/95 backdrop-blur-md border-b shadow-sm py-2" : "py-4"
       }`}
     >
-      <div
-        className={`container-tight flex items-center justify-between gap-4 rounded-2xl transition-all ${
-          scrolled ? "glass shadow-elegant px-4 py-2" : "px-2"
-        }`}
-      >
+      <div className="container-tight flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2.5 group">
           <div className="size-10 rounded-xl bg-gradient-gold grid place-items-center shadow-gold">
             <GraduationCap className="size-5 text-gold-foreground" />
@@ -97,7 +93,7 @@ export function Header() {
 
       {open && (
         <div className="lg:hidden container-tight mt-2">
-          <div className="glass rounded-2xl p-3 flex flex-col">
+          <div className="bg-background border shadow-xl rounded-2xl p-3 flex flex-col">
             {nav.map((n) => (
               <Link
                 key={n.to}

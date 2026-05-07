@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeader, FadeIn } from "@/components/Section";
 import { Award, GraduationCap, Heart, Target } from "lucide-react";
-import heroImg from "@/assets/hero-campus.jpg";
+import heroImg from "@/assets/hero-luxurious-bright.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

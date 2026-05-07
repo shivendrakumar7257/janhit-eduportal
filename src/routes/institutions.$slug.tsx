@@ -78,7 +78,7 @@ function Detail() {
 
             <FadeIn>
               <h2 className="text-3xl font-display font-bold">Courses Offered</h2>
-              <div className="mt-5 overflow-hidden rounded-2xl border border-border">
+              <div className="mt-5 overflow-x-auto rounded-2xl border border-border">
                 <table className="w-full text-sm">
                   <thead className="bg-secondary text-secondary-foreground">
                     <tr>

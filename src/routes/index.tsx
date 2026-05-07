@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, Award, BookOpen, Building2, Quote, Sparkles, Star, Users } from "lucide-react";
-import heroImg from "@/assets/hero-campus.jpg";
+import heroImg from "@/assets/hero-luxurious-bright.png";
 import { institutions } from "@/data/institutions";
 import { InstitutionCard } from "@/components/InstitutionCard";
 import { SectionHeader, FadeIn } from "@/components/Section";
@@ -50,7 +50,7 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="size-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
         <div className="relative container-tight py-24 md:py-36 text-primary-foreground">
           <motion.div
@@ -62,7 +62,7 @@ function Home() {
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-dark text-xs font-semibold tracking-wider uppercase">
               <Sparkles className="size-3.5 text-gold" /> Since 2002 · 7 Institutions
             </span>
-            <h1 className="mt-6 text-4xl md:text-7xl font-display font-bold leading-[1.05]">
+            <h1 className="mt-6 text-4xl md:text-7xl font-display font-bold leading-[1.05] drop-shadow-2xl">
               Janhit Group of <span className="text-gradient-gold">Institutions</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl opacity-90 max-w-2xl">

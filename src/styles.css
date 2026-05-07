@@ -1,5 +1,4 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -66,7 +65,7 @@
   --input: oklch(0.92 0.01 260);
   --ring: oklch(0.45 0.14 260);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.18 0.06 260) 0%, oklch(0.32 0.12 270) 50%, oklch(0.25 0.1 280) 100%);
+  --gradient-hero: linear-gradient(135deg, oklch(0.12 0 0) 0%, oklch(0.18 0 0) 50%, oklch(0.1 0 0) 100%);
   --gradient-gold: linear-gradient(135deg, oklch(0.82 0.15 85), oklch(0.7 0.16 60));
   --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
   --gradient-overlay: linear-gradient(180deg, color-mix(in oklab, var(--primary) 70%, transparent) 0%, color-mix(in oklab, var(--primary) 90%, transparent) 100%);
@@ -94,7 +93,7 @@
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.78 0.14 80);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.1 0.04 260) 0%, oklch(0.2 0.08 270) 50%, oklch(0.15 0.06 280) 100%);
+  --gradient-hero: linear-gradient(135deg, oklch(0.08 0 0) 0%, oklch(0.12 0 0) 50%, oklch(0.1 0 0) 100%);
 }
 
 @layer base {
@@ -117,9 +116,9 @@
     border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
   }
   .glass-dark {
-    background: color-mix(in oklab, oklch(0.15 0.04 260) 50%, transparent);
-    backdrop-filter: blur(20px) saturate(160%);
-    border: 1px solid oklch(1 0 0 / 10%);
+    background: oklch(0.1 0.02 260 / 90%);
+    backdrop-filter: blur(8px);
+    border: 1px solid oklch(1 0 0 / 15%);
   }
   .text-gradient-gold {
     background: var(--gradient-gold);
