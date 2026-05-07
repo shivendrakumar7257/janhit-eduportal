@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { institutions } from "@/data/institutions";
+import { institutions, type Institution } from "@/data/institutions";
 import { Award, Calendar, ExternalLink, Mail, MapPin, Phone, ArrowRight, Check } from "lucide-react";
 import { FadeIn, SectionHeader } from "@/components/Section";
 import lib from "@/assets/gallery-library.jpg";
@@ -12,7 +12,7 @@ import cultural from "@/assets/gallery-cultural.jpg";
 const gallery = [lib, lab, grad, sports, classroom, cultural];
 
 export const Route = createFileRoute("/institutions/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { inst: Institution } => {
     const inst = institutions.find((i) => i.slug === params.slug);
     if (!inst) throw notFound();
     return { inst };
