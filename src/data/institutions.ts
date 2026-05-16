@@ -2,7 +2,7 @@ import lawImg from "@/assets/campus-law.jpg";
 import gnImg from "@/assets/campus-greater-noida.jpg";
 import gzbImg from "@/assets/campus-ghaziabad.jpg";
 import sahImg from "@/assets/campus-saharanpur.jpg";
-import schoolImg from "@/assets/campus-school.jpg";
+import schoolImg from "@/assets/janhit-world-school-hero.png";
 
 export type Institution = {
   slug: string;

@@ -46,9 +46,9 @@ function Detail() {
 
   return (
     <>
-      <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
+      <section className="relative h-[65vh] min-h-[480px] overflow-hidden">
         <img src={inst.image} alt={inst.name} className="absolute inset-0 size-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-primary/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
         <div className="relative container-tight h-full flex flex-col justify-end pb-12 text-primary-foreground">
           <FadeIn>
             <div className="flex flex-wrap gap-2 mb-3">
