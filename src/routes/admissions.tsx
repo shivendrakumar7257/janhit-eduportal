@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/Section";
-import { Download, Phone, Send } from "lucide-react";
+import { Download, Phone, Send, GraduationCap, ArrowRight } from "lucide-react";
 import { institutions } from "@/data/institutions";
 import { useState } from "react";
 
@@ -36,7 +36,7 @@ function Admissions() {
             subtitle="Apply to your preferred program. Our team will guide you through every step."
           />
 
-          <div className="grid lg:grid-cols-3 gap-5 mb-12">
+          <div className="grid lg:grid-cols-3 gap-5 mb-8">
             {[
               { icon: Send, title: "Inquiry Form", desc: "Tell us your interest and we'll reach out." },
               { icon: Download, title: "Download Brochure", desc: "Get the complete prospectus PDF." },
@@ -50,6 +50,25 @@ function Admissions() {
                 <p className="mt-1 text-sm text-muted-foreground">{c.desc}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mb-12 p-6 md:p-8 rounded-3xl bg-gradient-gold text-gold-foreground flex flex-col md:flex-row items-center justify-between gap-6 shadow-gold">
+            <div className="flex items-center gap-5">
+              <div className="size-14 rounded-2xl bg-gold-foreground/10 grid place-items-center border border-gold-foreground/20">
+                <GraduationCap className="size-8" />
+              </div>
+              <div>
+                <h3 className="text-xl md:text-2xl font-display font-bold">Janhit World School Admissions</h3>
+                <p className="opacity-90 text-sm md:text-base">View detailed eligibility, fee structure, and founder's batch benefits.</p>
+              </div>
+            </div>
+            <Link 
+              to="/institutions/$slug" 
+              params={{ slug: "janhit-world-school-greater-noida" }}
+              className="px-6 py-3 rounded-xl bg-gold-foreground text-gold font-bold flex items-center gap-2 hover:opacity-90 transition-opacity shadow-lg"
+            >
+              View School Policy <ArrowRight className="size-4" />
+            </Link>
           </div>
 
           <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4 p-8 rounded-3xl bg-card border border-border">

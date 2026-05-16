@@ -106,7 +106,7 @@ export const institutions: Institution[] = [
     short: "CBSE-affiliated school nurturing curiosity and character.",
     description:
       "A modern K-12 school where global pedagogy meets Indian values — with smart classrooms, performing arts, sports, and STEAM labs.",
-    location: "Greater Noida, Uttar Pradesh",
+    location: "55B, Knowledge Park 5, Greater Noida, Uttar Pradesh",
     city: "Greater Noida",
     type: "School",
     image: schoolImg,
@@ -117,7 +117,7 @@ export const institutions: Institution[] = [
     maps: "https://www.google.com/maps?q=Greater+Noida",
     established: "2012",
     email: "info@janhitworldschool.com",
-    phone: "+91 98765 43214",
+    phone: "9958574400, 9773500617",
   },
   {
     slug: "janhit-world-school-ghaziabad",

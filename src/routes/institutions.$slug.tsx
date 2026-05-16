@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { institutions, type Institution } from "@/data/institutions";
 import { Award, Calendar, ExternalLink, Mail, MapPin, Phone, ArrowRight, Check } from "lucide-react";
 import { FadeIn, SectionHeader } from "@/components/Section";
+import { SchoolAdmissions } from "@/components/SchoolAdmissions";
 import lib from "@/assets/gallery-library.jpg";
 import lab from "@/assets/gallery-lab.jpg";
 import grad from "@/assets/gallery-graduation.jpg";
@@ -132,27 +133,31 @@ function Detail() {
               </div>
             </FadeIn>
 
-            <FadeIn>
-              <h2 className="text-3xl font-display font-bold">Admission Process</h2>
-              <ol className="mt-5 space-y-4">
-                {[
-                  ["Inquire", "Submit your interest via the inquiry form or call our team."],
-                  ["Apply", "Fill the online application and upload required documents."],
-                  ["Counselling", "Attend a counselling session to choose the right program."],
-                  ["Enroll", "Complete fee payment and confirm your seat."],
-                ].map(([t, d], i) => (
-                  <li key={t} className="flex gap-4">
-                    <div className="size-9 shrink-0 rounded-full bg-gradient-primary text-primary-foreground grid place-items-center font-bold">
-                      {i + 1}
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">{t}</h4>
-                      <p className="text-sm text-muted-foreground">{d}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </FadeIn>
+            {inst.type === "School" ? (
+              <SchoolAdmissions />
+            ) : (
+              <FadeIn>
+                <h2 className="text-3xl font-display font-bold">Admission Process</h2>
+                <ol className="mt-5 space-y-4">
+                  {[
+                    ["Inquire", "Submit your interest via the inquiry form or call our team."],
+                    ["Apply", "Fill the online application and upload required documents."],
+                    ["Counselling", "Attend a counselling session to choose the right program."],
+                    ["Enroll", "Complete fee payment and confirm your seat."],
+                  ].map(([t, d], i) => (
+                    <li key={t} className="flex gap-4">
+                      <div className="size-9 shrink-0 rounded-full bg-gradient-primary text-primary-foreground grid place-items-center font-bold">
+                        {i + 1}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold">{t}</h4>
+                        <p className="text-sm text-muted-foreground">{d}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </FadeIn>
+            )}
           </div>
 
           <aside className="space-y-5 lg:sticky lg:top-28 self-start">
